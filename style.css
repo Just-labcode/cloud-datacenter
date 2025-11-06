@@ -1,0 +1,402 @@
+:root {
+  --primary-color: #0A192F;
+  --accent-color: #00BFFF;
+  --secondary-color: #2C3E50;
+  --text-light: #FFFFFF;
+  --text-dark: #2E2E2E;
+  --background-light: #F4F6F8;  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  display: flex;
+  background: linear-gradient(to right, rgba(0,191,255,0.8), rgba(10,25,47,0.8));
+  backdrop-filter: blur(5px);
+  padding: 25px 10%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--text-light); 
+  font-weight: bold;
+  font-size: 2rem;  
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+li, a {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+li :hover {
+  color: var(--accent-color);
+}
+
+/* HERO */
+.hero-container {
+  color: var(--text-light);
+  background-color: var(--secondary-color);
+  padding: 16vh 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.hero-text h1 {
+  font-family: 'Roboto',sans-serif;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  opacity: .6;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-image img {
+  width: 600px;
+  max-width: 100%; 
+  border-radius: 10px;
+}
+
+/* FEATURES */
+.feature-container {
+  background-color: #f1f1f1;
+  padding: 60px 10%;
+}
+
+.feature-header {
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.feature-header h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.feature-header p{
+  font-size: 1.3rem;
+  opacity: .8;
+}
+
+/* card css */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+
+.blog-card {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;           
+  text-align: center;
+  border: 2px solid #ccc;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 6px;
+  background: white;
+  transition: transform 0.4s ease, box-shadow 0.2s ease;
+
+}
+
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.card-button button {
+  color: var(--primary-color);
+  border: 2px solid white;
+  background-color: var(--accent-color);
+  width: 200px;
+  padding: 10px;
+  border-radius: 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.card-button button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* MODAL */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-container.active {
+  display: flex;
+}
+
+.modal {
+  font-family: 'Roboto';
+  font-size: 1rem;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 80%;
+  min-height: 200px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  text-align: justify;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close-btn:hover{
+  color: red;
+  
+}
+/* PRICING */
+.pricing-container {
+  background-color: var(--primary-color);
+  padding: 60px 10%;
+}
+
+.pricing-header {
+  color: var(--background-light);
+  text-align: center;
+}
+
+.pricing-header h1 {
+  color: var(--text-light);
+  font-size: 3rem;
+}
+
+.pricing-header p{
+  font-size: 1.2rem;
+  opacity: .7;
+  margin-bottom: 20px;
+}
+
+.pricingcard-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 60px 10%;
+  background-color: var(--background-light);
+}
+
+.pricing-card {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  gap: 50px;
+  border-radius: 16px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 2rem;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.plans-card {
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  color: var(--text-light);
+  padding: 2rem;
+  text-align: center;
+}
+
+.pricing-features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 2rem;
+  color: var(--text-dark);
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* Large tablets and below (<= 992px) */
+@media (max-width: 992px) {
+  /* Navbar */
+  .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 5%;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  /* Hero section */
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 10vh 5%;
+  }
+
+  .hero-text {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+/* Tablets and below (<= 768px) */
+@media (max-width: 768px) {
+  /* Hero */
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  /* Features */
+  .feature-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .feature-header p {
+    font-size: 1.1rem;
+  }
+
+  /* Pricing */
+  .pricing-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .pricing-header p {
+    font-size: 1rem;
+  }
+
+  .card-button button {
+    width: 100%;
+  }
+}
+
+/* Mobile devices (<= 576px) */
+@media (max-width: 576px) {
+  /* Navbar */
+  .wrapper {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links ul {
+    gap: 0.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  /* Hero */
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  /* Features */
+  .feature-header h1 {
+    font-size: 2rem;
+  }
+
+  .feature-header p {
+    font-size: 0.95rem;
+  }
+
+  /* Pricing */
+  .pricing-header h1 {
+    font-size: 2rem;
+  }
+
+  .pricing-header p {
+    font-size: 0.95rem;
+  }
+
+  /* Modal */
+  .modal {
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 20px;
+  }
+}
