@@ -45,6 +45,15 @@ html{
   gap: 1rem;
 }
 
+.hamburger-container{
+  display: none;
+}
+
+.hamburger-container span{
+  color: white;
+  cursor: pointer;
+}
+
 li, a {
   color: var(--text-light);
   font-size: 1.2rem;
@@ -268,135 +277,35 @@ li :hover {
   color: var(--text-dark);
 }
 
-/* ===========================
-   RESPONSIVE DESIGN
-   =========================== */
+@media (max-width: 768px){
+  .nav-links{
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    width: 40vw;
+    height: 100vh;
+    background-color: rgb(69, 155, 242);
+    opacity: .8;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
 
-/* Large tablets and below (<= 992px) */
-@media (max-width: 992px) {
-  /* Navbar */
-  .wrapper {
+  .nav-links.active{
+    display: flex;
+    padding: 30px;
+  }
+
+  .nav-links ul{
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px 5%;
   }
 
-  .nav-links ul {
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: 1rem;
-  }
-
-  /* Hero section */
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-    padding: 10vh 5%;
-  }
-
-  .hero-text {
-    padding-right: 0;
-    margin-bottom: 30px;
-  }
-
-  .hero-text h1 {
-    font-size: 3rem;
-  }
-
-  .hero-text p {
-    font-size: 1.2rem;
-  }
-
-  .hero-image img {
-    width: 100%;
-    max-width: 500px;
-  }
-}
-
-/* Tablets and below (<= 768px) */
-@media (max-width: 768px) {
-  /* Hero */
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-text p {
-    font-size: 1.1rem;
-  }
-
-  /* Features */
-  .feature-header h1 {
-    font-size: 2.5rem;
-  }
-
-  .feature-header p {
-    font-size: 1.1rem;
-  }
-
-  /* Pricing */
-  .pricing-header h1 {
-    font-size: 2.5rem;
-  }
-
-  .pricing-header p {
-    font-size: 1rem;
-  }
-
-  .card-button button {
-    width: 100%;
-  }
-}
-
-/* Mobile devices (<= 576px) */
-@media (max-width: 576px) {
-  /* Navbar */
-  .wrapper {
-    padding: 15px 5%;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  .nav-links ul {
-    gap: 0.5rem;
-  }
-
-  .nav-links a {
-    font-size: 1rem;
-  }
-
-  /* Hero */
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-
-  /* Features */
-  .feature-header h1 {
-    font-size: 2rem;
-  }
-
-  .feature-header p {
-    font-size: 0.95rem;
-  }
-
-  /* Pricing */
-  .pricing-header h1 {
-    font-size: 2rem;
-  }
-
-  .pricing-header p {
-    font-size: 0.95rem;
-  }
-
-  /* Modal */
-  .modal {
-    width: 90%;
-    font-size: 0.9rem;
-    padding: 20px;
+  .hamburger-container{
+    display: block;
+    position: relative;
+    z-index: 1;
   }
 }

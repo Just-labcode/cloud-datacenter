@@ -17,3 +17,19 @@ document.querySelectorAll(".open-modal").forEach((btn, index) => {
     }
   });
 });
+// hamburger btn
+
+const hamburgerContainer = document.querySelector('.hamburger-container');
+const navItems = document.querySelector('.nav-links');
+const navIcon = hamburgerContainer.querySelector('.material-symbols-outlined');
+
+navIcon.addEventListener('click', () => {
+  navItems.classList.toggle('active');
+
+  if (navItems.classList.contains('active')){
+    navIcon.textContent = 'close';
+  }
+  else{
+    navIcon.textContent = 'menu';
+  }
+});
