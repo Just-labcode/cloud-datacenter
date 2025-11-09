@@ -81,13 +81,13 @@ li :hover {
 
 .hero-text h1 {
   font-family: 'Roboto',sans-serif;
-  font-size: 4rem;
+  font-size: clamp(2rem,5vw,4rem);
   margin-bottom: 20px;
 }
 
 .hero-text p {
   opacity: .6;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 5vw, 1.5rem);
   margin-bottom: 20px;
 }
 
@@ -111,12 +111,12 @@ li :hover {
 
 .feature-header h1 {
   font-family: 'Roboto', sans-serif;
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vw, 4rem);
   margin-bottom: 20px;
 }
 
 .feature-header p{
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 5vw, 1.5rem);
   opacity: .8;
 }
 
@@ -277,7 +277,7 @@ li :hover {
   color: var(--text-dark);
 }
 
-@media (max-width: 768px){
+@media (max-width: 950px){
   .nav-links{
     display: none;
     flex-direction: column;
@@ -308,4 +308,13 @@ li :hover {
     position: relative;
     z-index: 1;
   }
+  
+  .hero-container{
+    padding: 5vh,1%;
+  }
+
+  .hero-image img{
+    display: none;
+  }
+
 }
