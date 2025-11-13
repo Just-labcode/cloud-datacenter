@@ -7,6 +7,8 @@
   --background-light: #F4F6F8;  
 }
 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -277,6 +279,31 @@ li :hover {
   color: var(--text-dark);
 }
 
+.footer {
+  background-color: #0d1421; 
+  text-align: center;
+  padding: 40px 20px;
+  color: #cfd8e3;
+}
+
+.footer .social-icons {
+  margin-bottom: 15px;
+}
+
+.footer .social-icons a {
+  color: #cfd8e3;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #00b4d8; 
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
 
 
 @media (max-width: 1050px){
@@ -296,21 +323,28 @@ li :hover {
 
   .nav-links.active{
     display: flex;
-    padding: 30px;
+    align-items: center;
+    
   }
-
   .nav-links ul{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 20px;
   }
 
-  .hamburger-container{
-    display: block;
-    position: relative;
-    z-index: 1;
-  }
-  
+.hamburger-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  z-index: 1001; /* stays above the nav menu */
+}
   .hero-container{
     padding: 5vh,1%;
   }
